@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0ss2rymyhqr1"]
+
+[ext_resource type="Texture2D" uid="uid://dojx70xlkxuom" path="res://sprites/Fog.png" id="1_gf0e1"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4cuv1"]
+polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
+
+[node name="Block" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gf0e1")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_4cuv1")

@@ -1,0 +1,68 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731971731
+icon.svg::CompressedTexture2D::7725549685883845858::1731426992::1731427529::1::::<><>::
+::res://animations/::1731715278
+button_e.res::Animation::1366047337380753604::1731715278::0::1::::<><>::
+::res://levels/::1731971728
+level_1.tscn::PackedScene::2041873722824451939::1731778910::0::1::::<><>::uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://dojx70xlkxuom::::res://sprites/Fog.png<>res://shaders/fog.gdshader<>uid://by3nrdimxrt50::::res://prefabs/point_light_2d.tscn<>uid://0ss2rymyhqr1::::res://prefabs/block.tscn<>uid://bwxgpy3gqabj::::res://prefabs/bullet.tscn<>res://scripts/spawn_bullet.gd<>uid://d0cox15iil77u::::res://prefabs/canvas_layer.tscn<>uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://dm78b58vp2raa::::res://prefabs/npc_rat.tscn<>uid://qjo6yfdfdjvj::::res://prefabs/cheese.tscn<>uid://dj8edop8mvjxi::::res://prefabs/ui.tscn
+level_3(boss).tscn::PackedScene::525555112231530629::1731971728::0::1::::<><>::uid://b74uom2by64qp::::res://prefabs/dragon.tscn
+::res://packeds/::1731971823
+::res://packeds/Dungeon Gathering Free Version/::1731971823
+BlueCoin Sheet.png::CompressedTexture2D::3976839719070952388::1716115993::1731971826::1::::<><>::
+Button.png::CompressedTexture2D::4458295560519340270::1716116098::1731971826::1::::<><>::
+Coin Sheet.png::CompressedTexture2D::241581851299257009::1716116025::1731971826::1::::<><>::
+FreeLicense.txt::TextFile::-1::1725711486::0::1::::<><>::
+Potion 1.png::CompressedTexture2D::2961433321649155556::1725610821::1731971826::1::::<><>::
+Potion 2.png::CompressedTexture2D::752218824652758113::1725610848::1731971826::1::::<><>::
+Potion 3.png::CompressedTexture2D::182833216273588154::1725610853::1731971826::1::::<><>::
+Potion 4.png::CompressedTexture2D::1389173592866983741::1725610866::1731971826::1::::<><>::
+Potions.png::CompressedTexture2D::5801318034794328919::1716116344::1731971826::1::::<><>::
+Set 1.0.png::CompressedTexture2D::6980114605995172002::1725707536::1731971826::1::::<><>::
+Set 1.1.png::CompressedTexture2D::4226986648926194027::1725707106::1731971826::1::::<><>::
+Set 1.2.png::CompressedTexture2D::6038259964540896436::1725706997::1731971826::1::::<><>::
+Set 1.3.png::CompressedTexture2D::6022869632387339399::1725707160::1731971826::1::::<><>::
+Set 1.png::CompressedTexture2D::4145352063604233374::1725707393::1731971826::1::::<><>::
+Set 3.5.png::CompressedTexture2D::792282100564888437::1716032993::1731971826::1::::<><>::
+Set 4.5.png::CompressedTexture2D::6047183421370697267::1716113207::1731971826::1::::<><>::
+Structure.png::CompressedTexture2D::3584438854837636033::1716033059::1731971826::1::::<><>::
+Water.png::CompressedTexture2D::1784859712563278615::1716116122::1731971826::1::::<><>::
+::res://prefabs/::1731971561
+block.tscn::PackedScene::1793021943378963924::1731778910::0::1::::<><>::uid://dojx70xlkxuom::::res://sprites/Fog.png
+bullet.tscn::PackedScene::117013186030802443::1731778910::0::1::::<><>::uid://8exaa0ovrdf1::::res://sprites/Bullet.png<>res://scripts/bullet.gd
+canvas_layer.tscn::PackedScene::8919004421022656172::1731778910::0::1::::<><>::
+cheese.tscn::PackedScene::1142507563932380927::1731778910::0::1::::<><>::res://scripts/cheese.gd<>uid://dvnwmbvqnveru::::res://sprites/Cheese.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png
+curtain.tscn::PackedScene::5668546156203352846::1731601462::0::1::::<><>::uid://jdfc42bjt3tv::::res://sprites/Curtain.png
+dragon.tscn::PackedScene::4693570648016549627::1731971561::0::1::::<><>::uid://bplk2eauqqpu5::::res://sprites/Dragon.png
+npc.tscn::PackedScene::3490101100556151295::1731778910::0::1::::<><>::res://scripts/npc.gd<>uid://5x17jp1jmbb::::res://sprites/Npc.png<>uid://c818oif5br2bv::::res://sprites/WindowDialog.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png
+npc_rat.tscn::PackedScene::8069595337075122668::1731778910::0::1::::<><>::uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://b6tp8dv3axcv8::::res://sprites/Rat.png
+player.tscn::PackedScene::322116676681857202::1731779570::0::1::::<><>::res://scripts/player.gd<>uid://dickw634b62j3::::res://icon.svg
+point_light_2d.tscn::PackedScene::4129575358027037017::1731597122::0::1::::<><>::uid://c2bws6iikvg32::::res://sprites/2d_lights_and_shadows_neutral_point_light.webp
+quest.tscn::PackedScene::3487816195038285715::1731778910::0::1::::<><>::res://scripts/quest.gd
+ui.tscn::PackedScene::7859335095073557634::1731778910::0::1::::<><>::res://scripts/ui.gd
+wall_light.tscn::PackedScene::7759033372795896903::1731778910::0::1::::<><>::uid://2rn8dxgns5aw::::res://sprites/WallLight.png
+::res://scripts/::1731779570
+bullet.gd::GDScript::-1::1731631584::0::1::::<>RigidBody2D<>::
+cheese.gd::GDScript::-1::1731765363::0::1::::<>Area2D<>::
+colors.gd::GDScript::-1::1731778642::0::1::::Colors<>Node<>::
+npc.gd::GDScript::-1::1731779570::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1731778688::0::1::::<>CharacterBody2D<>::
+quest.gd::GDScript::-1::1731769191::0::1::::<>Node<>::
+quests.gd::GDScript::-1::1731767473::0::1::::<>Node<>::
+spawn_bullet.gd::GDScript::-1::1731630798::0::1::::<>Node2D<>::
+test.gd::GDScript::-1::1731711990::0::1::::<>CharacterBody2D<>::
+ui.gd::GDScript::-1::1731767299::0::1::::<>CanvasLayer<>::
+::res://shaders/::1731971728
+fog.gdshader::Shader::-1::1731971728::0::1::::<><>::
+::res://sprites/::1731971489
+2d_lights_and_shadows_neutral_point_light.webp::CompressedTexture2D::6671374082458256435::1731597025::1731597026::1::::<><>::
+Bullet.png::CompressedTexture2D::2325885881189877672::1731629752::1731629757::1::::<><>::
+ButtonE.png::CompressedTexture2D::6094764451864908147::1731713409::1731713410::1::::<><>::
+Cheese.png::CompressedTexture2D::8661421967357893918::1731714686::1731714687::1::::<><>::
+Cursor.png::CompressedTexture2D::8889935898431464081::1731576946::1731596090::1::::<><>::
+Curtain.png::CompressedTexture2D::638201447501228563::1731427882::1731446997::1::::<><>::
+Dragon.png::CompressedTexture2D::3462617090945478530::1731971485::1731971489::1::::<><>::
+Fog.png::CompressedTexture2D::8161940247165215664::1731429415::1731429416::1::::<><>::
+Npc.png::CompressedTexture2D::63375949464037339::1731674480::1731674631::1::::<><>::
+Rat.png::CompressedTexture2D::4602467891173641323::1731714423::1731714424::1::::<><>::
+WallLight.png::CompressedTexture2D::1931041645541995246::1731632679::1731632683::1::::<><>::
+WindowDialog.png::CompressedTexture2D::7144776120198708539::1731674630::1731674631::1::::<><>::

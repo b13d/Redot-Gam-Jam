@@ -1,0 +1,112 @@
+[gd_scene load_steps=17 format=3 uid="uid://4ddmkl4hvp20"]
+
+[ext_resource type="PackedScene" uid="uid://eubhkc04rl11" path="res://prefabs/player.tscn" id="1_1tx6h"]
+[ext_resource type="Texture2D" uid="uid://dojx70xlkxuom" path="res://sprites/Fog.png" id="3_3pd40"]
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="3_xeni6"]
+[ext_resource type="PackedScene" uid="uid://by3nrdimxrt50" path="res://prefabs/point_light_2d.tscn" id="5_ru87g"]
+[ext_resource type="PackedScene" uid="uid://0ss2rymyhqr1" path="res://prefabs/block.tscn" id="6_h07oo"]
+[ext_resource type="PackedScene" uid="uid://bwxgpy3gqabj" path="res://prefabs/bullet.tscn" id="8_7vjjn"]
+[ext_resource type="Script" path="res://scripts/spawn_bullet.gd" id="8_8snjy"]
+[ext_resource type="PackedScene" uid="uid://d0cox15iil77u" path="res://prefabs/canvas_layer.tscn" id="9_3r5my"]
+[ext_resource type="PackedScene" uid="uid://bpyvpqh2skuxr" path="res://prefabs/npc.tscn" id="9_tpycu"]
+[ext_resource type="PackedScene" uid="uid://dm78b58vp2raa" path="res://prefabs/npc_rat.tscn" id="10_jbmgy"]
+[ext_resource type="PackedScene" uid="uid://qjo6yfdfdjvj" path="res://prefabs/cheese.tscn" id="11_ukml0"]
+[ext_resource type="PackedScene" uid="uid://dj8edop8mvjxi" path="res://prefabs/ui.tscn" id="12_vlnmm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lp33k"]
+shader = ExtResource("3_xeni6")
+
+[sub_resource type="Gradient" id="Gradient_n4cco"]
+colors = PackedColorArray(0, 0.760784, 0, 1, 0, 0.495656, 0.167147, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wfw8y"]
+gradient = SubResource("Gradient_n4cco")
+fill_from = Vector2(0.486239, 0.00917431)
+fill_to = Vector2(0.550459, 0.518349)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f165j"]
+size = Vector2(1391, 40)
+
+[node name="Level_1" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_1tx6h")]
+position = Vector2(0, -109)
+
+[node name="Fog" type="Sprite2D" parent="."]
+process_mode = 4
+visible = false
+material = SubResource("ShaderMaterial_lp33k")
+scale = Vector2(37.75, 37.75)
+texture = ExtResource("3_3pd40")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="PointLight2D" parent="." instance=ExtResource("5_ru87g")]
+visible = false
+position = Vector2(2, 7)
+scale = Vector2(2.91406, 2.91406)
+color = Color(1, 0.788235, 0, 1)
+shadow_enabled = true
+shadow_filter_smooth = 51.1
+texture_scale = 2.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3776.5, 29)
+scale = Vector2(275.531, 23.4375)
+texture = ExtResource("3_3pd40")
+metadata/_edit_lock_ = true
+
+[node name="Block" parent="." instance=ExtResource("6_h07oo")]
+visible = false
+position = Vector2(144, 86)
+
+[node name="Block" parent="Block" instance=ExtResource("6_h07oo")]
+position = Vector2(-225, 21)
+
+[node name="Block" parent="Block/Block" instance=ExtResource("6_h07oo")]
+position = Vector2(198, -159)
+
+[node name="SpawnBullet" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+script = ExtResource("8_8snjy")
+bullet = ExtResource("8_7vjjn")
+
+[node name="Npc" parent="." instance=ExtResource("9_tpycu")]
+position = Vector2(182, 0)
+id_quest = 1
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 55)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(0, -3)
+scale = Vector2(21.7188, 0.625)
+texture = SubResource("GradientTexture2D_wfw8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+visible = false
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_f165j")
+debug_color = Color(0.958666, 0, 0.52589, 0.42)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("9_3r5my")]
+process_mode = 4
+visible = false
+
+[node name="NpcRat" parent="." instance=ExtResource("10_jbmgy")]
+position = Vector2(-408, 0)
+
+[node name="Cheese" parent="." instance=ExtResource("11_ukml0")]
+position = Vector2(34, 20)
+
+[node name="Cheese2" parent="." instance=ExtResource("11_ukml0")]
+position = Vector2(-103, 20)
+
+[node name="Cheese3" parent="." instance=ExtResource("11_ukml0")]
+position = Vector2(-38, 20)
+
+[node name="UI" parent="." instance=ExtResource("12_vlnmm")]

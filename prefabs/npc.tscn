@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://bpyvpqh2skuxr"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_2wd24"]
+[ext_resource type="Texture2D" uid="uid://5x17jp1jmbb" path="res://sprites/Npc.png" id="1_v3rf6"]
+[ext_resource type="Texture2D" uid="uid://c818oif5br2bv" path="res://sprites/WindowDialog.png" id="3_wv8uo"]
+[ext_resource type="Texture2D" uid="uid://cs3l46md4fkwh" path="res://sprites/ButtonE.png" id="4_hjncy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfqqq"]
+
+[sub_resource type="Animation" id="Animation_han4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialog/ButtonE:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w8mo8"]
+resource_name = "button_e"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialog/ButtonE:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jrpk4"]
+_data = {
+"RESET": SubResource("Animation_han4y"),
+"button_e": SubResource("Animation_w8mo8")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_1al4o"]
+spacing_bottom = -9
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4lrr"]
+font = SubResource("FontVariation_1al4o")
+
+[node name="Npc" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_2wd24")
+MAX_INDEX = 2
+texts = Array[String](["Привет!", "Меня зовут Данила!", "Рад знакомству!"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rfqqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v3rf6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jrpk4")
+}
+autoplay = "button_e"
+
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -44.6667
+offset_right = 36.0
+offset_bottom = -4.66667
+
+[node name="BackgroundText" type="TextureRect" parent="Dialog"]
+layout_mode = 0
+offset_left = -22.6667
+offset_top = 14.3334
+offset_right = 31.3333
+offset_bottom = 33.3334
+texture = ExtResource("3_wv8uo")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Dialog/BackgroundText"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.074
+anchor_top = 0.053
+anchor_right = 0.937
+anchor_bottom = 1.0
+offset_left = 0.00399995
+offset_top = -0.00700009
+offset_right = 137.402
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.253333, 0.253333)
+text = "Hello! My name is Danila! What's you name?"
+label_settings = SubResource("LabelSettings_h4lrr")
+autowrap_mode = 3
+
+[node name="ButtonE" type="TextureRect" parent="Dialog"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 12.0
+offset_right = 33.0
+offset_bottom = 23.0
+texture = ExtResource("4_hjncy")
+expand_mode = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

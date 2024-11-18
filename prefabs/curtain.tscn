@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm05ek258g6co"]
+
+[ext_resource type="Texture2D" uid="uid://jdfc42bjt3tv" path="res://sprites/Curtain.png" id="1_22d3d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m583h"]
+size = Vector2(316, 196)
+
+[node name="Curtain" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_m583h")
+debug_color = Color(0.953813, 5.10186e-06, 0.551641, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_22d3d")
