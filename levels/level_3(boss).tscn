@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=4 uid="uid://hqt20gxdtbvp"]
+[gd_scene load_steps=19 format=4 uid="uid://hqt20gxdtbvp"]
 
 [ext_resource type="PackedScene" uid="uid://b74uom2by64qp" path="res://prefabs/dragon.tscn" id="1_pabbc"]
 [ext_resource type="PackedScene" uid="uid://burcvxxej4f10" path="res://tilemap/tile_map_walltscn.tscn" id="2_vxffe"]
 [ext_resource type="PackedScene" uid="uid://eubhkc04rl11" path="res://prefabs/player.tscn" id="4_0p20y"]
 [ext_resource type="PackedScene" uid="uid://818xm430tjou" path="res://ui/ui_boss_fight.tscn" id="4_ckkqt"]
 [ext_resource type="Script" path="res://scripts/fight.gd" id="5_scl7h"]
+[ext_resource type="PackedScene" uid="uid://bqvqvr7xoa3is" path="res://ui/loss.tscn" id="6_bo0vx"]
+[ext_resource type="Script" path="res://scripts/final_dialog.gd" id="7_pwhul"]
+[ext_resource type="Texture2D" uid="uid://b8kbmepww8l4e" path="res://sprites/WindowDialogDragon.png" id="8_cysq0"]
+[ext_resource type="Texture2D" uid="uid://c818oif5br2bv" path="res://sprites/WindowDialog.png" id="9_70moe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jonyj"]
 size = Vector2(317, 11)
@@ -12,7 +16,33 @@ size = Vector2(317, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuppw"]
 size = Vector2(7, 81)
 
-[node name="Level_3(BOSS)" type="Node"]
+[sub_resource type="FontVariation" id="FontVariation_stu3k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_actpa"]
+line_spacing = 0.0
+font = SubResource("FontVariation_stu3k")
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.235662, 1.81994e-07, 8.42288e-08, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pqf31"]
+line_spacing = 0.0
+font = SubResource("FontVariation_stu3k")
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.54338, 0.193003, 0.0215912, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_iqo1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ay8tu"]
+bg_color = Color(0.522329, 0.114078, 0.575829, 1)
+skew = Vector2(1.725, -0.6)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vchms"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aitea"]
+bg_color = Color(0.0923134, 0.0517154, 0.127351, 1)
+skew = Vector2(1.725, -0.6)
+
+[node name="World" type="Node2D"]
 
 [node name="Dragon" parent="." instance=ExtResource("1_pabbc")]
 position = Vector2(286, 0)
@@ -22,7 +52,7 @@ z_index = -1
 tile_map_data = PackedByteArray("AAABAPr/AAAGAAcAAAACAPr/AAAGAAcAAAADAPr/AAAGAAcAAAAEAPr/AAAGAAcAAAAFAPr/AAAGAAcAAAAGAPr/AAAGAAcAAAAHAPr/AAAGAAcAAAAIAPr/AAAGAAcAAAAJAPr/AAAGAAcAAAAKAPr/AAAGAAcAAAALAPr/AAAGAAcAAAAMAPr/AAAGAAcAAAANAPr/AAAGAAcAAAAOAPr/AAAGAAcAAAAPAPr/AAAGAAcAAAAQAPr/AAAGAAcAAAARAPr/AAAGAAcAAAASAPr/AAAGAAcAAAATAPr/AAAGAAcAAAAUAPr/AAAHAAcAAAAAAPr/AAAFAAcAAAAAAPv/AAAFAAgAAAAAAPz/AAAFAAgAAAAAAP3/AAAIAAgAAAAAAP7/AAAFAAgAAAAAAP//AAAFAAgAAAAAAAMAAAAOAAkAAAAUAPv/AAAHAAgAAAAUAPz/AAANAAgAAAAUAP3/AAAHAAgAAAAUAP7/AAAHAAgAAAAUAP//AAAHAAgAAAAUAAAAAAAHAAgAAAAUAAEAAAAHAAgAAAAUAAIAAAAHAAgAAAAUAAMAAAANAAgAAAACAPv/AAAGAAgAAAACAPz/AAAGAAgAAAACAP3/AAAGAAgAAAACAP7/AAAGAAgAAAACAP//AAAGAAgAAAACAAAAAAAGAAgAAAACAAEAAAAGAAgAAAADAPv/AAAGAAgAAAADAPz/AAAGAAgAAAADAP3/AAAGAAgAAAADAP7/AAAGAAgAAAADAP//AAAGAAgAAAADAAAAAAAGAAgAAAADAAEAAAAGAAgAAAAEAPv/AAAGAAgAAAAEAPz/AAAGAAgAAAAEAP3/AAAGAAgAAAAEAP7/AAAGAAgAAAAEAP//AAAGAAgAAAAEAAAAAAAGAAgAAAAEAAEAAAAGAAgAAAAFAPv/AAAGAAgAAAAFAPz/AAAGAAgAAAAFAP3/AAAGAAgAAAAFAP7/AAAGAAgAAAAFAP//AAAGAAgAAAAFAAAAAAAGAAgAAAAFAAEAAAAGAAgAAAAGAPv/AAAGAAgAAAAGAPz/AAAGAAgAAAAGAP3/AAAGAAgAAAAGAP7/AAAGAAgAAAAGAP//AAAGAAgAAAAGAAAAAAAGAAgAAAAGAAEAAAAGAAgAAAAHAPv/AAAGAAgAAAAHAPz/AAAGAAgAAAAHAP3/AAAGAAgAAAAHAP7/AAAGAAgAAAAHAP//AAAGAAgAAAAHAAAAAAAGAAgAAAAHAAEAAAAGAAgAAAAIAPv/AAAGAAgAAAAIAPz/AAAGAAgAAAAIAP3/AAAGAAgAAAAIAP7/AAAGAAgAAAAIAP//AAAGAAgAAAAIAAEAAAAGAAgAAAAJAPv/AAAGAAgAAAAJAPz/AAAGAAgAAAAJAP3/AAAGAAgAAAAJAP7/AAAGAAgAAAAJAAEAAAAGAAgAAAAKAPv/AAAGAAgAAAAKAPz/AAAGAAgAAAAKAP3/AAAGAAgAAAAKAP7/AAAGAAgAAAAKAAEAAAAGAAgAAAALAPv/AAAGAAgAAAALAPz/AAAGAAgAAAALAAAAAAAGAAgAAAALAAEAAAAGAAgAAAAMAPv/AAAGAAgAAAAMAPz/AAAGAAgAAAAMAP3/AAAGAAgAAAAMAP7/AAAGAAgAAAAMAAEAAAAGAAgAAAANAPv/AAAGAAgAAAANAPz/AAAGAAgAAAANAP3/AAAGAAgAAAANAP7/AAAGAAgAAAANAP//AAAGAAgAAAANAAAAAAAGAAgAAAANAAEAAAAGAAgAAAAOAPv/AAAGAAgAAAAOAPz/AAAGAAgAAAAOAP3/AAAGAAgAAAAOAP7/AAAGAAgAAAAOAP//AAAGAAgAAAAOAAAAAAAGAAgAAAAOAAEAAAAGAAgAAAAPAPv/AAAGAAgAAAAPAPz/AAAGAAgAAAAPAP3/AAAGAAgAAAAPAP7/AAAGAAgAAAAPAP//AAAGAAgAAAAPAAAAAAAGAAgAAAAPAAEAAAAGAAgAAAAQAPv/AAAGAAgAAAAQAPz/AAAGAAgAAAAQAP3/AAAGAAgAAAAQAP7/AAAGAAgAAAAQAP//AAAGAAgAAAAQAAAAAAAGAAgAAAAQAAEAAAAGAAgAAAARAPv/AAAGAAgAAAARAPz/AAAGAAgAAAARAP3/AAAGAAgAAAARAP7/AAAGAAgAAAARAP//AAAGAAgAAAARAAAAAAAGAAgAAAARAAEAAAAGAAgAAAASAPv/AAAGAAgAAAASAPz/AAAGAAgAAAASAP3/AAAGAAgAAAASAP7/AAAGAAgAAAASAP//AAAGAAgAAAASAAAAAAAGAAgAAAASAAEAAAAGAAgAAAATAPv/AAAGAAgAAAATAPz/AAAGAAgAAAATAP3/AAAGAAgAAAATAP7/AAAGAAgAAAATAP//AAAGAAgAAAATAAAAAAAGAAgAAAATAAEAAAAGAAgAAAABAPv/AAAGAAgAAAABAPz/AAAGAAgAAAABAP3/AAAJAAgAAAABAP7/AAAGAAgAAAABAP//AAAGAAgAAAABAAAAAAAGAAgAAAABAAEAAAAGAAgAAAABAAIAAAAGAAgAAAABAAMAAAAEAAwAAAABAAQAAAAGAAkAAAACAAIAAAAGAAgAAAACAAMAAAAGAAwAAAACAAQAAAAGAAkAAAADAAIAAAAGAAgAAAADAAMAAAAGAAwAAAADAAQAAAAGAAkAAAAEAAIAAAAGAAgAAAAEAAMAAAAHAAwAAAAEAAQAAAAGAAkAAAAFAAIAAAAGAAgAAAAFAAMAAAAHAAwAAAAFAAQAAAAGAAkAAAAGAAIAAAAGAAgAAAAGAAMAAAAEAAwAAAAGAAQAAAAGAAkAAAAHAAIAAAAGAAgAAAAHAAMAAAAGAAwAAAAHAAQAAAAGAAkAAAAIAAIAAAAGAAgAAAAIAAMAAAAGAAwAAAAIAAQAAAAGAAkAAAAJAAIAAAAGAAgAAAAJAAMAAAAGAAwAAAAJAAQAAAAGAAkAAAAKAAIAAAAGAAgAAAAKAAMAAAAGAAwAAAAKAAQAAAAGAAkAAAALAAIAAAAGAAgAAAALAAMAAAAHAAwAAAALAAQAAAAGAAkAAAAMAAIAAAAGAAgAAAAMAAMAAAAGAAwAAAAMAAQAAAAGAAkAAAANAAIAAAAGAAgAAAANAAMAAAAGAAwAAAANAAQAAAAGAAkAAAAOAAIAAAAGAAgAAAAOAAMAAAAEAAwAAAAOAAQAAAAGAAkAAAAPAAIAAAAGAAgAAAAPAAMAAAAHAAwAAAAPAAQAAAAGAAkAAAAQAAIAAAAGAAgAAAAQAAMAAAAGAAwAAAAQAAQAAAAGAAkAAAARAAIAAAAGAAgAAAARAAMAAAAGAAwAAAARAAQAAAAGAAkAAAASAAIAAAAGAAgAAAASAAMAAAAGAAwAAAASAAQAAAAGAAkAAAATAAIAAAAGAAgAAAATAAMAAAAGAAwAAAATAAQAAAAGAAkAAAAUAAQAAAAHAAkAAAAAAAQAAAAFAAkAAAAAAAIAAAAFAAgAAAAAAAAAAAAFAAgAAAAAAAEAAAAGAAgAAAAMAAAAAAAGAAgAAAAMAP//AAAGAAgAAAALAP7/AAAGAAgAAAALAP3/AAAGAAgAAAAIAAAAAAAGAAgAAAAJAAAAAAAGAAgAAAAJAP//AAAGAAgAAAAKAAAAAAAGAAgAAAAKAP//AAAGAAgAAAALAP//AAAGAAgAAAA=")
 
 [node name="Player" parent="." instance=ExtResource("4_0p20y")]
-position = Vector2(29, 27)
+position = Vector2(29, 37)
 isFight = true
 
 [node name="Wall" type="StaticBody2D" parent="."]
@@ -39,6 +69,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="UIBossFight" parent="." instance=ExtResource("4_ckkqt")]
+unique_name_in_owner = true
 
 [node name="Fight" type="Node" parent="."]
 script = ExtResource("5_scl7h")
@@ -50,4 +81,75 @@ position = Vector2(3, 23)
 position = Vector2(0.5, -12.5)
 shape = SubResource("RectangleShape2D_xuppw")
 
+[node name="Loss" parent="." instance=ExtResource("6_bo0vx")]
+visible = false
+
+[node name="FinalDialog" type="Control" parent="." node_paths=PackedStringArray("labelPlayer", "labelDragon")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_pwhul")
+playerTexts = ["Меня зовут Стюарт Литтл", "Спасибо!", "Прощай дракон!"]
+dragonTexts = ["Ты смог помочь мне, и вытащить занозу из моей ноги,позволь узнать как зовут тебя?", "Необычное имя, мне нравится", "Чтож, теперь, когда я избавлен от боли, я могу улететь отсюда, и перестать вас пугать своим присутствием", "Прощай, храбрый мышенок!"]
+labelPlayer = NodePath("BGPlayerDialog/LabelPlayer")
+labelDragon = NodePath("BGDragonDialog/LabelDragon")
+
+[node name="BGDragonDialog" type="TextureRect" parent="FinalDialog"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = -83.0
+offset_right = 326.0
+offset_bottom = -38.0
+texture = ExtResource("8_cysq0")
+
+[node name="LabelDragon" type="Label" parent="FinalDialog/BGDragonDialog"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 71.0
+scale = Vector2(0.4, 0.4)
+label_settings = SubResource("LabelSettings_actpa")
+autowrap_mode = 2
+
+[node name="BGPlayerDialog" type="TextureRect" parent="FinalDialog"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -24.0
+offset_right = 108.0
+offset_bottom = 5.0
+texture = ExtResource("9_70moe")
+
+[node name="LabelPlayer" type="Label" parent="FinalDialog/BGPlayerDialog"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 290.0
+offset_bottom = 117.0
+scale = Vector2(0.25, 0.25)
+label_settings = SubResource("LabelSettings_pqf31")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="FinalDialog"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 1.0
+offset_right = 183.0
+offset_bottom = 24.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(30, 15)
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_iqo1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ay8tu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vchms")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aitea")
+text = "..."
+
+[connection signal="pressed" from="FinalDialog/Button" to="FinalDialog" method="_on_button_pressed"]
+
+[editable path="Dragon"]
 [editable path="UIBossFight"]

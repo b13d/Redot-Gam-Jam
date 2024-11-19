@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpyvpqh2skuxr"]
+[gd_scene load_steps=16 format=3 uid="uid://bpyvpqh2skuxr"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_2wd24"]
 [ext_resource type="Texture2D" uid="uid://5x17jp1jmbb" path="res://sprites/Npc.png" id="1_v3rf6"]
 [ext_resource type="Texture2D" uid="uid://c818oif5br2bv" path="res://sprites/WindowDialog.png" id="3_wv8uo"]
 [ext_resource type="Texture2D" uid="uid://cs3l46md4fkwh" path="res://sprites/ButtonE.png" id="4_hjncy"]
+[ext_resource type="Script" path="res://scripts/quest.gd" id="5_cu0o7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfqqq"]
 
@@ -51,11 +52,25 @@ spacing_bottom = -9
 [sub_resource type="LabelSettings" id="LabelSettings_h4lrr"]
 font = SubResource("FontVariation_1al4o")
 
-[node name="Npc" type="Area2D"]
+[sub_resource type="FontVariation" id="FontVariation_8svwj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_okgh7"]
+font = SubResource("FontVariation_8svwj")
+
+[sub_resource type="Curve" id="Curve_kcyb6"]
+max_value = 1.5
+_data = [Vector2(0, 0.483516), 0.0, 0.0, 0, 0, Vector2(0.507463, 1.21978), 0.0, 0.0, 0, 0, Vector2(0.99999, 0.478022), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_ev0c1"]
+colors = PackedColorArray(1, 0.784314, 0, 1, 1, 0.47451, 0, 1)
+
+[node name="Npc" type="Area2D" node_paths=PackedStringArray("quest")]
 scale = Vector2(3, 3)
 script = ExtResource("1_2wd24")
-MAX_INDEX = 2
+quest = NodePath("Quest")
 texts = Array[String](["Привет!", "Меня зовут Данила!", "Рад знакомству!"])
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rfqqq")
@@ -112,6 +127,46 @@ offset_right = 33.0
 offset_bottom = 23.0
 texture = ExtResource("4_hjncy")
 expand_mode = 1
+
+[node name="LabelCounter" type="Label" parent="Dialog"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.466667
+anchor_right = 0.485
+anchor_bottom = 0.639167
+offset_right = 19.6
+offset_bottom = 19.7225
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(15.5556, 11.1111)
+text = "1/3"
+label_settings = SubResource("LabelSettings_okgh7")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Quest" type="Node" parent="."]
+script = ExtResource("5_cu0o7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 32
+lifetime = 1.5
+speed_scale = 1.5
+emission_shape = 3
+emission_rect_extents = Vector2(10, 10)
+direction = Vector2(0, -45)
+gravity = Vector2(0, 0)
+initial_velocity_max = 15.0
+tangential_accel_min = -25.0
+tangential_accel_max = 25.0
+damping_max = 20.0
+angle_max = 360.0
+scale_amount_min = 0.1
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_kcyb6")
+color = Color(1, 0.709804, 0.298039, 1)
+color_ramp = SubResource("Gradient_ev0c1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

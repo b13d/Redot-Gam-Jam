@@ -8,7 +8,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if can_take and Input.is_action_just_pressed("use"):
-		queue_free()
+		Globals.cheeses += 1
+		%UI.labelCheeses.text = str(Globals.cheeses)
+		get_parent().DestoyQuestItem(self)
 	pass
 
 

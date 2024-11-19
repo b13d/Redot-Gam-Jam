@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2fienf1rw4ar"]
+[gd_scene load_steps=7 format=3 uid="uid://b2fienf1rw4ar"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_57bpv"]
+[ext_resource type="Texture2D" uid="uid://dvnwmbvqnveru" path="res://sprites/Cheese.png" id="2_wyvqy"]
 
 [sub_resource type="FontVariation" id="FontVariation_62g47"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nsq2t"]
 font = SubResource("FontVariation_62g47")
+
+[sub_resource type="FontVariation" id="FontVariation_hqs3n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b038y"]
+font = SubResource("FontVariation_hqs3n")
+font_size = 32
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_57bpv")
@@ -21,3 +28,18 @@ vertical = true
 layout_mode = 2
 text = " Нету текущий заданий"
 label_settings = SubResource("LabelSettings_nsq2t")
+
+[node name="BoxContainer2" type="BoxContainer" parent="."]
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 97.0
+offset_bottom = 75.0
+
+[node name="TextureRect" type="TextureRect" parent="BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_wyvqy")
+
+[node name="LabelCheeses" type="Label" parent="BoxContainer2"]
+layout_mode = 2
+text = "3"
+label_settings = SubResource("LabelSettings_b038y")

@@ -1,13 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731973558
+::res://::1732058581
 icon.svg::CompressedTexture2D::7725549685883845858::1731426992::1731427529::1::::<><>::
 README.md::TextFile::-1::1731973170::0::1::::<><>::
+Useful notes.txt::TextFile::-1::1731974664::0::1::::<><>::
 ::res://animations/::1731715278
 button_e.res::Animation::1366047337380753604::1731715278::0::1::::<><>::
-::res://levels/::1731972468
-level_1.tscn::PackedScene::2041873722824451939::1731973673::0::1::::<><>::uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://dojx70xlkxuom::::res://sprites/Fog.png<>res://shaders/fog.gdshader<>uid://by3nrdimxrt50::::res://prefabs/point_light_2d.tscn<>uid://0ss2rymyhqr1::::res://prefabs/block.tscn<>uid://bwxgpy3gqabj::::res://prefabs/bullet.tscn<>res://scripts/spawn_bullet.gd<>uid://d0cox15iil77u::::res://prefabs/canvas_layer.tscn<>uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://dm78b58vp2raa::::res://prefabs/npc_rat.tscn<>uid://qjo6yfdfdjvj::::res://prefabs/cheese.tscn<>uid://dj8edop8mvjxi::::res://prefabs/ui.tscn
-level_3(boss).tscn::PackedScene::525555112231530629::1731972468::0::1::::<><>::uid://b74uom2by64qp::::res://prefabs/dragon.tscn<>uid://burcvxxej4f10::::res://tilemap/tile_map_walltscn.tscn
-::res://packeds/::1731971823
+::res://levels/::1732058570
+level_1.tscn::PackedScene::2041873722824451939::1732058570::0::1::::<><>::res://scripts/world.gd<>uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://dojx70xlkxuom::::res://sprites/Fog.png<>res://shaders/fog.gdshader<>uid://by3nrdimxrt50::::res://prefabs/point_light_2d.tscn<>uid://0ss2rymyhqr1::::res://prefabs/block.tscn<>uid://bwxgpy3gqabj::::res://prefabs/bullet.tscn<>res://scripts/spawn_bullet.gd<>uid://d0cox15iil77u::::res://ui/canvas_layer.tscn<>uid://b6tp8dv3axcv8::::res://sprites/Rat.png<>uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://qjo6yfdfdjvj::::res://prefabs/cheese.tscn<>uid://b2fienf1rw4ar::::res://ui/ui.tscn<>res://scripts/quest.gd<>uid://durhh6uosxyly::::res://tilemap/tile_environment.tscn
+level_3(boss).tscn::PackedScene::525555112231530629::1732058437::0::1::::<><>::uid://b74uom2by64qp::::res://prefabs/dragon.tscn<>uid://burcvxxej4f10::::res://tilemap/tile_map_walltscn.tscn<>uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://818xm430tjou::::res://ui/ui_boss_fight.tscn<>res://scripts/fight.gd<>uid://bqvqvr7xoa3is::::res://ui/loss.tscn<>res://scripts/final_dialog.gd<>uid://b8kbmepww8l4e::::res://sprites/WindowDialogDragon.png<>uid://c818oif5br2bv::::res://sprites/WindowDialog.png
+::res://packeds/::1732058236
 ::res://packeds/Dungeon Gathering Free Version/::1731971836
 BlueCoin Sheet.png::CompressedTexture2D::3976839719070952388::1716115993::1731971826::1::::<><>::
 Button.png::CompressedTexture2D::4458295560519340270::1716116098::1731971826::1::::<><>::
@@ -26,37 +27,50 @@ Set 3.5.png::CompressedTexture2D::792282100564888437::1716032993::1731971826::1:
 Set 4.5.png::CompressedTexture2D::6047183421370697267::1716113207::1731971826::1::::<><>::
 Structure.png::CompressedTexture2D::3584438854837636033::1716033059::1731971826::1::::<><>::
 Water.png::CompressedTexture2D::1784859712563278615::1716116122::1731971826::1::::<><>::
-::res://prefabs/::1731971561
+::res://packeds/Free - Adventure Pack - Grassland/::1732058213
+Autor_note.txt::TextFile::-1::1732058213::0::1::::<><>::
+::res://packeds/Free - Adventure Pack - Grassland/Assets/::1732058238
+Assets.png::CompressedTexture2D::7611884139181288645::1732058213::1732058238::1::::<><>::
+Background_1.png::CompressedTexture2D::6593342708129603378::1732058213::1732058238::1::::<><>::
+Background_2.png::CompressedTexture2D::4175970785025806078::1732058213::1732058238::1::::<><>::
+::res://packeds/Free - Adventure Pack - Grassland/Social/::1732058239
+Assets.png::CompressedTexture2D::5768719399002092713::1732058213::1732058239::1::::<><>::
+entrance.png::CompressedTexture2D::9014890177859773452::1732058213::1732058238::1::::<><>::
+Mine.png::CompressedTexture2D::8189018075395590518::1732058213::1732058238::1::::<><>::
+trees.png::CompressedTexture2D::2471779124594595259::1732058213::1732058238::1::::<><>::
+::res://prefabs/::1732058437
 block.tscn::PackedScene::1793021943378963924::1731778910::0::1::::<><>::uid://dojx70xlkxuom::::res://sprites/Fog.png
 bullet.tscn::PackedScene::117013186030802443::1731778910::0::1::::<><>::uid://8exaa0ovrdf1::::res://sprites/Bullet.png<>res://scripts/bullet.gd
-canvas_layer.tscn::PackedScene::8919004421022656172::1731778910::0::1::::<><>::
-cheese.tscn::PackedScene::1142507563932380927::1731778910::0::1::::<><>::res://scripts/cheese.gd<>uid://dvnwmbvqnveru::::res://sprites/Cheese.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png
+cheese.tscn::PackedScene::1142507563932380927::1732058437::0::1::::<><>::res://scripts/cheese.gd<>uid://dvnwmbvqnveru::::res://sprites/Cheese.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png
 curtain.tscn::PackedScene::5668546156203352846::1731601462::0::1::::<><>::uid://jdfc42bjt3tv::::res://sprites/Curtain.png
-dragon.tscn::PackedScene::4693570648016549627::1731971561::0::1::::<><>::uid://bplk2eauqqpu5::::res://sprites/Dragon.png
-npc.tscn::PackedScene::3490101100556151295::1731778910::0::1::::<><>::res://scripts/npc.gd<>uid://5x17jp1jmbb::::res://sprites/Npc.png<>uid://c818oif5br2bv::::res://sprites/WindowDialog.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png
-npc_rat.tscn::PackedScene::8069595337075122668::1731778910::0::1::::<><>::uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://b6tp8dv3axcv8::::res://sprites/Rat.png
-player.tscn::PackedScene::322116676681857202::1731779570::0::1::::<><>::res://scripts/player.gd<>uid://dickw634b62j3::::res://icon.svg
+dragon.tscn::PackedScene::4693570648016549627::1732058437::0::1::::<><>::uid://bplk2eauqqpu5::::res://sprites/Dragon.png
+npc.tscn::PackedScene::3490101100556151295::1732058437::0::1::::<><>::res://scripts/npc.gd<>uid://5x17jp1jmbb::::res://sprites/Npc.png<>uid://c818oif5br2bv::::res://sprites/WindowDialog.png<>uid://cs3l46md4fkwh::::res://sprites/ButtonE.png<>res://scripts/quest.gd
+player.tscn::PackedScene::322116676681857202::1732058437::0::1::::<><>::res://scripts/player.gd<>uid://b6tp8dv3axcv8::::res://sprites/Rat.png
 point_light_2d.tscn::PackedScene::4129575358027037017::1731597122::0::1::::<><>::uid://c2bws6iikvg32::::res://sprites/2d_lights_and_shadows_neutral_point_light.webp
-quest.tscn::PackedScene::3487816195038285715::1731778910::0::1::::<><>::res://scripts/quest.gd
-ui.tscn::PackedScene::7859335095073557634::1731778910::0::1::::<><>::res://scripts/ui.gd
 wall_light.tscn::PackedScene::7759033372795896903::1731778910::0::1::::<><>::uid://2rn8dxgns5aw::::res://sprites/WallLight.png
-::res://scripts/::1731779570
+::res://scripts/::1732057766
 bullet.gd::GDScript::-1::1731631584::0::1::::<>RigidBody2D<>::
-cheese.gd::GDScript::-1::1731765363::0::1::::<>Area2D<>::
-colors.gd::GDScript::-1::1731778642::0::1::::Colors<>Node<>::
-npc.gd::GDScript::-1::1731779570::0::1::::<>Area2D<>::
-player.gd::GDScript::-1::1731778688::0::1::::<>CharacterBody2D<>::
-quest.gd::GDScript::-1::1731769191::0::1::::<>Node<>::
-quests.gd::GDScript::-1::1731767473::0::1::::<>Node<>::
+cheese.gd::GDScript::-1::1732039896::0::1::::<>Area2D<>::
+colors.gd::GDScript::-1::1731974531::0::1::::Colors<>Node<>::
+dialog.gd::GDScript::-1::1732055160::0::1::::<>Control<>::
+fight.gd::GDScript::-1::1732057766::0::1::::<>Node<>::
+final_dialog.gd::GDScript::-1::1732057492::0::1::::<>Control<>::
+globals.gd::GDScript::-1::1732041581::0::1::::<>Node<>::
+loss.gd::GDScript::-1::1732053289::0::1::::<>CanvasLayer<>::
+npc.gd::GDScript::-1::1732051850::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1731988429::0::1::::Player<>CharacterBody2D<>::
+quest.gd::GDScript::-1::1732041455::0::1::::Quest<>Node<>::
 spawn_bullet.gd::GDScript::-1::1731630798::0::1::::<>Node2D<>::
 test.gd::GDScript::-1::1731711990::0::1::::<>CharacterBody2D<>::
-ui.gd::GDScript::-1::1731767299::0::1::::<>CanvasLayer<>::
-::res://shaders/::1731973575
-fog.gdshader::Shader::-1::1731973673::0::1::::<><>::
-::res://sprites/::1731971489
+ui.gd::GDScript::-1::1732055727::0::1::::UI<>CanvasLayer<>::
+world.gd::GDScript::-1::1731990995::0::1::::<>Node2D<>::
+::res://shaders/::1732058573
+fog.gdshader::Shader::-1::1732058573::0::1::::<><>::
+::res://sprites/::1732054077
 2d_lights_and_shadows_neutral_point_light.webp::CompressedTexture2D::6671374082458256435::1731597025::1731597026::1::::<><>::
 Bullet.png::CompressedTexture2D::2325885881189877672::1731629752::1731629757::1::::<><>::
 ButtonE.png::CompressedTexture2D::6094764451864908147::1731713409::1731713410::1::::<><>::
+ButtonFight.png::CompressedTexture2D::8065042681882387796::1732042649::1732042689::1::::<><>::
 Cheese.png::CompressedTexture2D::8661421967357893918::1731714686::1731714687::1::::<><>::
 Cursor.png::CompressedTexture2D::8889935898431464081::1731576946::1731596090::1::::<><>::
 Curtain.png::CompressedTexture2D::638201447501228563::1731427882::1731446997::1::::<><>::
@@ -65,9 +79,18 @@ Fog.png::CompressedTexture2D::8161940247165215664::1731429415::1731429416::1::::
 Npc.png::CompressedTexture2D::63375949464037339::1731674480::1731674631::1::::<><>::
 Rat.png::CompressedTexture2D::4602467891173641323::1731714423::1731714424::1::::<><>::
 WallLight.png::CompressedTexture2D::1931041645541995246::1731632679::1731632683::1::::<><>::
-WindowDialog.png::CompressedTexture2D::7144776120198708539::1731674630::1731674631::1::::<><>::
-::res://tilemap/::1731971931
-tile_map_walltscn.tscn::PackedScene::3825452157692770777::1731971931::0::1::::<><>::uid://b0cblwle3tv23::::res://packeds/Dungeon Gathering Free Version/Set 1.png
-::res://ui/::1731973575
-progress_bar.tscn::PackedScene::1097737538909246207::1731973575::0::1::::<><>::
-ui.tscn::PackedScene::4292334921540536517::1731973636::0::1::::<><>::uid://pv0tu44md8f0::::res://ui/progress_bar.tscn
+WindowDialog.png::CompressedTexture2D::7144776120198708539::1732053853::1732053855::1::::<><>::
+WindowDialogDragon.png::CompressedTexture2D::4723378682104148978::1732054074::1732054077::1::::<><>::
+::res://Test/::1732058437
+test.gd::GDScript::-1::1731994336::0::1::::<>Control<>::
+test.tscn::PackedScene::8742566363720894803::1732058437::0::1::::<><>::uid://dvnwmbvqnveru::::res://sprites/Cheese.png<>res://Test/test.gd<>res://Test/texture_rect.gd
+texture_rect.gd::GDScript::-1::1731994459::0::1::::<>TextureRect<>::
+::res://tilemap/::1732058437
+tile_environment.tscn::PackedScene::8598572524946691462::1732058437::0::1::::<><>::uid://dgpivclg2nfxl::::res://packeds/Free - Adventure Pack - Grassland/Assets/Assets.png
+tile_map_walltscn.tscn::PackedScene::3825452157692770777::1732035978::0::1::::<><>::uid://b0cblwle3tv23::::res://packeds/Dungeon Gathering Free Version/Set 1.png
+::res://ui/::1732058437
+canvas_layer.tscn::PackedScene::8919004421022656172::1731778910::0::1::::<><>::
+loss.tscn::PackedScene::3553804031687590610::1732058437::0::1::::<><>::res://scripts/loss.gd
+progress_bar.tscn::PackedScene::1097737538909246207::1732035978::0::1::::<><>::
+ui.tscn::PackedScene::4292334921540536517::1732058437::0::1::::<><>::res://scripts/ui.gd<>uid://dvnwmbvqnveru::::res://sprites/Cheese.png
+ui_boss_fight.tscn::PackedScene::2371951072067616508::1732058437::0::1::::<><>::res://scripts/ui.gd<>uid://pv0tu44md8f0::::res://ui/progress_bar.tscn<>uid://dm51cskfwgfaq::::res://sprites/ButtonFight.png<>uid://b6tp8dv3axcv8::::res://sprites/Rat.png
