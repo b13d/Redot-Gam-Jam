@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://pv0tu44md8f0"]
+
+[node name="ProgressBar" type="ProgressBar"]
+self_modulate = Color(1, 0.698039, 0, 1)
+offset_right = 238.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.983005, 0.982215, 0.982666, 1)
+step = 1.0

@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://0ss2rymyhqr1" path="res://prefabs/block.tscn" id="6_h07oo"]
 [ext_resource type="PackedScene" uid="uid://bwxgpy3gqabj" path="res://prefabs/bullet.tscn" id="8_7vjjn"]
 [ext_resource type="Script" path="res://scripts/spawn_bullet.gd" id="8_8snjy"]
-[ext_resource type="PackedScene" uid="uid://d0cox15iil77u" path="res://prefabs/canvas_layer.tscn" id="9_3r5my"]
+[ext_resource type="PackedScene" uid="uid://d0cox15iil77u" path="res://ui/canvas_layer.tscn" id="9_3r5my"]
 [ext_resource type="PackedScene" uid="uid://bpyvpqh2skuxr" path="res://prefabs/npc.tscn" id="9_tpycu"]
 [ext_resource type="PackedScene" uid="uid://dm78b58vp2raa" path="res://prefabs/npc_rat.tscn" id="10_jbmgy"]
 [ext_resource type="PackedScene" uid="uid://qjo6yfdfdjvj" path="res://prefabs/cheese.tscn" id="11_ukml0"]
-[ext_resource type="PackedScene" uid="uid://dj8edop8mvjxi" path="res://prefabs/ui.tscn" id="12_vlnmm"]
+[ext_resource type="PackedScene" uid="uid://b2fienf1rw4ar" path="res://ui/ui.tscn" id="12_7202q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lp33k"]
 shader = ExtResource("3_xeni6")
@@ -109,4 +109,4 @@ position = Vector2(-103, 20)
 [node name="Cheese3" parent="." instance=ExtResource("11_ukml0")]
 position = Vector2(-38, 20)
 
-[node name="UI" parent="." instance=ExtResource("12_vlnmm")]
+[node name="UI" parent="." instance=ExtResource("12_7202q")]

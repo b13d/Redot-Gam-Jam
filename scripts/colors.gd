@@ -7,7 +7,7 @@ var blue = "blue"
 var green = "green"
 
 func _ready() -> void:
-	print(red)
+	#print(red)
 	pass # Replace with function body.
 
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://818xm430tjou"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_im6pv"]
+[ext_resource type="PackedScene" uid="uid://pv0tu44md8f0" path="res://ui/progress_bar.tscn" id="2_t4xcl"]
+
+[node name="UIBossFight" type="CanvasLayer"]
+script = ExtResource("1_im6pv")
+
+[node name="ProgressBar" parent="." instance=ExtResource("2_t4xcl")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -119.0
+offset_top = 102.0
+offset_right = 119.0
+offset_bottom = 129.0
+grow_horizontal = 2
+pivot_offset = Vector2(118, 13)

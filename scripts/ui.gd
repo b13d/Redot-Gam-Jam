@@ -7,6 +7,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if nothing_label == null:
+		return
+	
 	if Quests.count_active_quests == 0:
 		nothing_label.text = "Нету активных квестов"
 	else:

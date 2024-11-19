@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Jame Gam #44"
+config/name="Redot Gam Jam"
 run/main_scene="res://levels/level_1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 Quests="*res://scripts/quests.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 

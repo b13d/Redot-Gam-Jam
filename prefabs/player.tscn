@@ -12,6 +12,7 @@ polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_8giil")
 metadata/_edit_group_ = true
 
@@ -27,6 +28,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_efxnk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(1.8, 1.8)
 limit_smoothed = true
 

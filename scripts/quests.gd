@@ -1,4 +1,10 @@
 extends Node
 
-var quests = ["Собери три кусочка сыра", "Победи дракона"]
+var quests = []
 var count_active_quests = 0
+
+
+func AddQuest(quest: String):
+	count_active_quests += 1
+	quests.append(quest)
+	pass

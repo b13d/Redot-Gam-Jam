@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731971731
+::res://::1731973558
 icon.svg::CompressedTexture2D::7725549685883845858::1731426992::1731427529::1::::<><>::
+README.md::TextFile::-1::1731973170::0::1::::<><>::
 ::res://animations/::1731715278
 button_e.res::Animation::1366047337380753604::1731715278::0::1::::<><>::
-::res://levels/::1731971728
-level_1.tscn::PackedScene::2041873722824451939::1731778910::0::1::::<><>::uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://dojx70xlkxuom::::res://sprites/Fog.png<>res://shaders/fog.gdshader<>uid://by3nrdimxrt50::::res://prefabs/point_light_2d.tscn<>uid://0ss2rymyhqr1::::res://prefabs/block.tscn<>uid://bwxgpy3gqabj::::res://prefabs/bullet.tscn<>res://scripts/spawn_bullet.gd<>uid://d0cox15iil77u::::res://prefabs/canvas_layer.tscn<>uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://dm78b58vp2raa::::res://prefabs/npc_rat.tscn<>uid://qjo6yfdfdjvj::::res://prefabs/cheese.tscn<>uid://dj8edop8mvjxi::::res://prefabs/ui.tscn
-level_3(boss).tscn::PackedScene::525555112231530629::1731971728::0::1::::<><>::uid://b74uom2by64qp::::res://prefabs/dragon.tscn
+::res://levels/::1731972468
+level_1.tscn::PackedScene::2041873722824451939::1731973673::0::1::::<><>::uid://eubhkc04rl11::::res://prefabs/player.tscn<>uid://dojx70xlkxuom::::res://sprites/Fog.png<>res://shaders/fog.gdshader<>uid://by3nrdimxrt50::::res://prefabs/point_light_2d.tscn<>uid://0ss2rymyhqr1::::res://prefabs/block.tscn<>uid://bwxgpy3gqabj::::res://prefabs/bullet.tscn<>res://scripts/spawn_bullet.gd<>uid://d0cox15iil77u::::res://prefabs/canvas_layer.tscn<>uid://bpyvpqh2skuxr::::res://prefabs/npc.tscn<>uid://dm78b58vp2raa::::res://prefabs/npc_rat.tscn<>uid://qjo6yfdfdjvj::::res://prefabs/cheese.tscn<>uid://dj8edop8mvjxi::::res://prefabs/ui.tscn
+level_3(boss).tscn::PackedScene::525555112231530629::1731972468::0::1::::<><>::uid://b74uom2by64qp::::res://prefabs/dragon.tscn<>uid://burcvxxej4f10::::res://tilemap/tile_map_walltscn.tscn
 ::res://packeds/::1731971823
-::res://packeds/Dungeon Gathering Free Version/::1731971823
+::res://packeds/Dungeon Gathering Free Version/::1731971836
 BlueCoin Sheet.png::CompressedTexture2D::3976839719070952388::1716115993::1731971826::1::::<><>::
 Button.png::CompressedTexture2D::4458295560519340270::1716116098::1731971826::1::::<><>::
 Coin Sheet.png::CompressedTexture2D::241581851299257009::1716116025::1731971826::1::::<><>::
-FreeLicense.txt::TextFile::-1::1725711486::0::1::::<><>::
 Potion 1.png::CompressedTexture2D::2961433321649155556::1725610821::1731971826::1::::<><>::
 Potion 2.png::CompressedTexture2D::752218824652758113::1725610848::1731971826::1::::<><>::
 Potion 3.png::CompressedTexture2D::182833216273588154::1725610853::1731971826::1::::<><>::
@@ -51,8 +51,8 @@ quests.gd::GDScript::-1::1731767473::0::1::::<>Node<>::
 spawn_bullet.gd::GDScript::-1::1731630798::0::1::::<>Node2D<>::
 test.gd::GDScript::-1::1731711990::0::1::::<>CharacterBody2D<>::
 ui.gd::GDScript::-1::1731767299::0::1::::<>CanvasLayer<>::
-::res://shaders/::1731971728
-fog.gdshader::Shader::-1::1731971728::0::1::::<><>::
+::res://shaders/::1731973575
+fog.gdshader::Shader::-1::1731973673::0::1::::<><>::
 ::res://sprites/::1731971489
 2d_lights_and_shadows_neutral_point_light.webp::CompressedTexture2D::6671374082458256435::1731597025::1731597026::1::::<><>::
 Bullet.png::CompressedTexture2D::2325885881189877672::1731629752::1731629757::1::::<><>::
@@ -66,3 +66,8 @@ Npc.png::CompressedTexture2D::63375949464037339::1731674480::1731674631::1::::<>
 Rat.png::CompressedTexture2D::4602467891173641323::1731714423::1731714424::1::::<><>::
 WallLight.png::CompressedTexture2D::1931041645541995246::1731632679::1731632683::1::::<><>::
 WindowDialog.png::CompressedTexture2D::7144776120198708539::1731674630::1731674631::1::::<><>::
+::res://tilemap/::1731971931
+tile_map_walltscn.tscn::PackedScene::3825452157692770777::1731971931::0::1::::<><>::uid://b0cblwle3tv23::::res://packeds/Dungeon Gathering Free Version/Set 1.png
+::res://ui/::1731973575
+progress_bar.tscn::PackedScene::1097737538909246207::1731973575::0::1::::<><>::
+ui.tscn::PackedScene::4292334921540536517::1731973636::0::1::::<><>::uid://pv0tu44md8f0::::res://ui/progress_bar.tscn

@@ -1,3 +1,15 @@
 res://shaders/fog.gdshader
 res://prefabs/dragon.tscn
 res://levels/level_3(boss).tscn
+res://ui/progress_bar.tscn
+res://ui/ui.tscn
+res://levels/level_1.tscn
+res://ui/ui_boss_fight.tscn
+res://prefabs/player.tscn
+res://tilemap/tile_map_walltscn.tscn
+res://scripts/ui.gd
+res://scripts/fight.gd
+res://scripts/colors.gd
+res://scripts/player.gd
+res://Useful notes.txt
+res://scripts/quests.gd
